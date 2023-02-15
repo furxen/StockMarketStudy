@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+    
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- FONTAWESOME CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <!-- Styling CSS -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/header/marketHeader.css" />
+    <link rel="stylesheet" href="./styles/dashboard/dashboard.css" />
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header mb-3">
+        <nav class="nav">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <div class="row navHead">
+                  <div
+                    class="leftMenu col-6 col-lg-6 col-md-2 col-sm-2 col-sm-2"
+                  >
+                    <div class="row">
+                      <div class="col-3 logo">
+                        <span class="logoPicture"
+                          ><img src="./img/logo.svg" alt=""
+                        /></span>
+                        <a href="/"><span class="text">Cryptolly.</span></a>
+                      </div>
+                      <div class="col-9 nav-links">
+                        <input type="checkbox" id="check" />
+                        <label for="check">
+                          <i class="fas fa-bars" id="btn"></i>
+                          <i class="fas fa-times" id="cancel"></i>
+                        </label>
+
+                        <ul>
+                          <li><a href="/dashboard.html">Dashboard</a></li>
+                          <li><a href="/exchange.html">Exchange</a></li>
+                          <li><a href="/wallet.html">Wallet</a></li>
+                          <li><a href="/market.html">Market</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="rightMenu col-6 col-lg-6 col-md-10 col-sm-10 col-sm-10"
+                  >
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-12 person">
+                            <div class="search-box">
+                              <input
+                                class="search-txt"
+                                type="text"
+                                name=""
+                                placeholder="Search..."
+                              />
+                              <div class="search-btn">
+                                <a href=""> <i class="fas fa-search"></i></a>
+                              </div>
+                            </div>
+                            <div class="notification">
+                              <img src="./img/Notification.svg" alt="" />
+                            </div>
+                            <h1>John Doe</h1>
+                            <img
+                              class="profil-img"
+                              src="./img/maskGroup.svg"
+                              alt=""
+                            />
+                            <a href=""><img src="./img/down.svg" alt="" /></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <section class="coinTransactions">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8 col-md-12 mb-3">
+                    <div class="row  balanceContainer">
+                        <div class="balanceContent col-md-5 col-sm-12">
+                            <div class="balance">
+                                <div class="balanceTitle">
+                                    <h2>Balance</h2>
+                                    <p style="color: var(--lightGreen);"><i class="fa-solid fa-up-long"></i> 2.36%</p>
+                                </div>
+                                <h4>USD 12.243,55</h4>
+                                <div class="row pb-2 incomeExpenses">
+                                    <div class="col-6" style="border-right: 1px solid var(--grey80);">
+                                        <span>
+                                          <i class="fa-solid fa-circle-up" style="color: var(--lightGreen);"></i>
+                                            Income
+                                        </span>
+                                        <h3>USD 12.243,55</h3>
+                                    </div>
+                                    <div class="col-6">
+                                        <span>
+                                          <i class="fa-solid fa-circle-down" style="color: var(--redPrimary);"></i>
+                                            Expenses
+                                        </span>
+                                        <h3>USD 3.132,23</h3>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7 col-sm-12">
+                            <div class="wallet">
+                                <div class="d-flex justify-content-between">
+                                  <h2>Wallet</h2>
+                                  <p>5 Currencies</p>
+                                </div>
+                                <div class="row">
+                                  <div class="col-4 currenciesImg">
+                                  </div>
+                                  <div class="col-8 currencies">
+                                    <div class="currency">
+                                      <div class="coin">
+                                        <img src="img/Bitcoin.svg" alt="">
+                                        <div class="coinTitle">
+                                          <h3>BTC</h3>
+                                          <span>Bitcoin</span>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <p style="color: var(--lightGreen);">
+                                          <i class="fa-solid fa-circle-up"></i>
+                                           2.36%</p>
+                                      </div>
+                                    </div>
+                                    <div class="currency">
+                                      <div class="coin">
+                                        <img src="img/ETH.svg" alt="">
+                                        <div class="coinTitle">
+                                          <h3>ETH</h3>
+                                          <span>Ethereum</span>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <p style="color: var(--redPrimary);"><i class="fa-solid fa-circle-down";"></i> 4.23%</p>
+                                      </div>
+                                    </div>
+                                    <div class="currency">
+                                      <div class="coin">
+                                        <img src="img/USDT.svg" alt="">
+                                        <div class="coinTitle">
+                                          <h3>USDT</h3>
+                                          <span>Tether</span>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <p><i class="fa-solid fa-equals" ></i> 1.36%</p>
+                                      </div>
+                                    </div>
+                                    <div class="currency">
+                                      <div class="coin">
+                                        <img src="img/ETH.svg" alt="">
+                                        <div class="coinTitle">
+                                          <h3>ETH</h3>
+                                          <span>Ethereum</span>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <p style="color: var(--redPrimary);">4.23%</p>
+                                      </div>
+                                    </div>
+                                    <div class="currency">
+                                      <div class="coin">
+                                        <img src="img/USDT.svg" alt="">
+                                        <div class="coinTitle">
+                                          <h3>USDT</h3>
+                                          <span>Tether</span>
+                                        </div>
+                                      </div>
+                                      <div>
+                                        <p style="color: var(--lightGreen);">1.36%</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-8 offset-md-2 offset-lg-0 justify-content-center">
+                  <div class="transaction">
+                    <div class="transactionTitle">
+                      <h2>Transaction</h2>
+                      <p>All <i class="fa-solid fa-chevron-down"></i></p>
+                    </div>
+                    <div class="transactionContent">
+                      <ul>
+                        <li class="purchases">
+                          <div class="d-flex">
+                            <img class="pr-2" src="img/Bitcoin.svg" alt="">
+                            <h3>BTC</h3>
+                          </div>
+                          <div>
+                            <span>Receive <i class="fa-solid fa-up-long" style="color: var(--lightGreen);"></i></span>
+                          </div>
+                          <div style="color: var(--grey0);" >$0.143,21</div>
+                        </li>
+                        <li class="purchases">
+                          <div class="d-flex">
+                            <img class="pr-2" src="img/ETH.svg" alt="">
+                            <h3>ETH</h3>
+                          </div>
+                          <div>
+                            <span>Send <i class="fa-solid fa-down-long" style="color: var(--redPrimary);"></i></span>
+                          </div>
+                          <div style="color: var(--grey0);" >$0.143,21</div>
+                        </li>
+                        <li class="purchases">
+                          <div class="d-flex">
+                            <img class="pr-2" src="img/BNB.svg" alt="">
+                            <h3>BNB</h3>
+                          </div>
+                          <div>
+                            <span>Receive <i class="fa-solid fa-up-long" style="color: var(--lightGreen);"></i></span>
+                          </div>
+                          <div style="color: var(--grey0);" >$0.143,21</div>
+                        </li>
+                        <li class="purchases">
+                          <div class="d-flex">
+                            <img class="pr-2" src="img/ITC.svg" alt="">
+                            <h3>ITC</h3>
+                          </div>
+                          <div>
+                            <span>Receive <i class="fa-solid fa-up-long" style="color: var(--lightGreen);"></i></span>
+                          </div>
+                          <div style="color: var(--grey0);" >$0.143,21</div>
+                        </li>
+                        <li class="purchases">
+                          <div class="d-flex">
+                            <img class="pr-2" src="img/Bitcoin.svg" alt="">
+                            <h3>BTC</h3>
+                          </div>
+                          <div>
+                            <span>Receive <i class="fa-solid fa-down-long" style="color: var(--redPrimary);"></i></span>
+                          </div>
+                          <div style="color: var(--grey0);" >$0.143,21</div>
+                        </li>
+                        <li class="purchases">
+                          <div class="d-flex">
+                            <img class="pr-2" src="img/Bitcoin.svg" alt="">
+                            <h3>BTC</h3>
+                          </div>
+                          <div>
+                            <span>Receive <i class="fa-solid fa-down-long" style="color: var(--redPrimary);"></i></span>
+                          </div>
+                          <div style="color: var(--grey0);" >$0.143,21</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="overallGrowth mb-3">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3 col-md-12">
+            <div class="exchange">
+              <div class="d-flex justify-content-between">
+                <h2>Exchange</h2>
+                <p><i class="fa-solid fa-repeat"></i></p>
+              </div>
+              <div class="d-flex justify-content-between">
+                <p>1 BTC</p>
+                <p><i class="fa-solid fa-arrow-right"></i></p>
+                <h3>53,260.20</h3>
+                <span>USD</span>
+              </div>
+              <div class="mb-3">
+                <span>Get</span>
+                <div class="d-flex get">
+                  <input type="text" value="5000">
+                  <img src="img/Bitcoin.svg" alt="" >
+                </div>
+              </div>
+              <div class="mb-4">
+                <span>Pay</span>
+                <div class="d-flex get">
+                  <input type="text" value="5000">
+                  <img src="img/Bitcoin.svg" alt="" >
+                </div>
+              </div>
+              <div class="exchangeButton">
+                <button>
+                  Exchange
+                </button>
+              </div>
+            </div> 
+          </div>
+
+
+          <div class="col-lg-9 col-md -12">
+            <div class="graphic">
+              <div class="graphicTitle">
+                <h2>Overall Growth</h2>
+                <ul>
+                  <li class="d-block" ><a class="active" href="/">1 min</a></li>
+                  <li><a href="/">3 min</a></li>
+                  <li><a href="/">30 min</a></li>
+                  <li><a href="/">1 hour</a></li>
+                  <li><a href="/">24 hour</a></li>
+                  <li><a href="/">1 day</a></li>
+                  <li><a href="/">1 week</a></li>
+                </ul>
+              </div>
+              <div class="graphicContent">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="swiperContainer mb-3">
+      <div class="container-fluid">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper mb-5">
+            <div class="swiper-slide">
+              <div class="d-flex justify-content-between mb-3">
+                <img src="./img/Bitcoin.svg" alt="">
+                <span>BTC</span>
+                <h3>USD 53,260.20</h3>
+              </div>
+              <div class="swiperGraphic m-3">
+                <p style="color: var(--lightGreen);">
+                  <i class="fa-solid fa-circle-up"></i>
+                   2.36%</p>
+                <img src="./img/Graphic-Geçici-Silinecek.svg" alt="">
+              </div>
+              <div class="text-center">
+                <span>Bitcoin</span>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="d-flex justify-content-between mb-3">
+                <img src="./img/Bitcoin.svg" alt="">
+                <span>BTC</span>
+                <h3>USD 53,260.20</h3>
+              </div>
+              <div class="swiperGraphic m-3">
+                <p style="color: var(--lightGreen);">
+                  <i class="fa-solid fa-circle-up"></i>
+                   2.36%</p>
+                <img src="./img/Graphic-Geçici-Silinecek.svg" alt="">
+              </div>
+              <div class="text-center">
+                <span>Bitcoin</span>
+              </div>
+            </div>  
+            <div class="swiper-slide">
+              <div class="d-flex justify-content-between mb-3">
+                <img src="./img/Bitcoin.svg" alt="">
+                <span>BTC</span>
+                <h3>USD 53,260.20</h3>
+              </div>
+              <div class="swiperGraphic m-3">
+                <p style="color: var(--lightGreen);">
+                  <i class="fa-solid fa-circle-up"></i>
+                   2.36%</p>
+                <img src="./img/Graphic-Geçici-Silinecek.svg" alt="">
+              </div>
+              <div class="text-center">
+                <span>Bitcoin</span>
+              </div>
+            </div>  
+            <div class="swiper-slide">
+              <div class="d-flex justify-content-between mb-3">
+                <img src="./img/Bitcoin.svg" alt="">
+                <span>BTC</span>
+                <h3>USD 53,260.20</h3>
+              </div>
+              <div class="swiperGraphic m-3">
+                <p style="color: var(--lightGreen);">
+                  <i class="fa-solid fa-circle-up"></i>
+                   2.36%</p>
+                <img src="./img/Graphic-Geçici-Silinecek.svg" alt="">
+              </div>
+              <div class="text-center">
+                <span>Bitcoin</span>
+              </div>
+            </div>  
+            <div class="swiper-slide">
+              <div class="d-flex justify-content-between mb-3">
+                <img src="./img/Bitcoin.svg" alt="">
+                <span>BTC</span>
+                <h3>USD 53,260.20</h3>
+              </div>
+              <div class="swiperGraphic m-3">
+                <p style="color: var(--lightGreen);">
+                  <i class="fa-solid fa-circle-up"></i>
+                   2.36%</p>
+                <img src="./img/Graphic-Geçici-Silinecek.svg" alt="">
+              </div>
+              <div class="text-center">
+                <span>Bitcoin</span>
+              </div>
+            </div>  
+            <div class="swiper-slide">
+              <div class="d-flex justify-content-between mb-3">
+                <img src="./img/Bitcoin.svg" alt="">
+                <span>BTC</span>
+                <h3>USD 53,260.20</h3>
+              </div>
+              <div class="swiperGraphic m-3">
+                <p style="color: var(--lightGreen);">
+                  <i class="fa-solid fa-circle-up"></i>
+                   2.36%</p>
+                <img src="./img/Graphic-Geçici-Silinecek.svg" alt="">
+              </div>
+              <div class="text-center">
+                <span>Bitcoin</span>
+              </div>
+            </div>  
+            <div class="swiper-slide">
+              <div class="d-flex justify-content-between mb-3">
+                <img src="./img/Bitcoin.svg" alt="">
+                <span>BTC</span>
+                <h3>USD 53,260.20</h3>
+              </div>
+              <div class="swiperGraphic m-3">
+                <p style="color: var(--lightGreen);">
+                  <i class="fa-solid fa-circle-up"></i>
+                   2.36%</p>
+                <img src="./img/Graphic-Geçici-Silinecek.svg" alt="">
+              </div>
+              <div class="text-center">
+                <span>Bitcoin</span>
+              </div>
+            </div>    
+          </div>
+          <div class="swiper-button-next mySwiper-prev"></div>
+          <div class="swiper-button-prev mySwiper-prev"></div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+ <!-- Swiper JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+ <!-- Initialize Swiper -->
+ <script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      200: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      460: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 50,
+      },
+    },
+  });
+</script>
+</body>
+</html>

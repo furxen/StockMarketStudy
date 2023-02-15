@@ -1,0 +1,450 @@
+body {
+    background: var(--darkerGrey);
+}
+
+h1 {
+    font-family: 'Graphik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--grey0);
+}
+
+h2 {
+    color: var(--grey40);
+    font-family: 'Graphik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+}
+
+h3 {
+    color: var(--grey0);
+    font-family: 'Graphik';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 27px;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--grey80);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track{
+    background: none;
+}
+
+.swiper__container {
+    margin-top: 30px;
+    margin-bottom: 24px;
+
+    .mySwiper {
+        background: var(transparent);
+        height: 221px !important;
+        width: 100%;
+        height: 100%;
+
+        .swiper-slide {
+            background: var(--grey100);
+            border-radius: 20px;
+            height: 100%;
+            border: 2px solid transparent;
+            transition: 1s;
+
+            &:hover {
+                background: transparent;
+                border: 2px solid blue;
+                cursor: pointer;
+
+            }
+
+            .swiper__coin {
+                .coin__ratio {
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 24px;
+
+                    .coin__img {
+                        display: flex;
+
+                        img {
+                            width: 24px;
+                            height: 24px;
+
+                        }
+
+                        h1 {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    .coin__proportion {
+                        p {
+                            font-family: 'Graphik';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 18px;
+                            line-height: 27px;
+                            color: var(--redPrimary);
+                        }
+                    }
+                }
+
+                .coin__price {
+                    h3 {
+
+                        margin-left: 16%;
+                        margin-bottom: 8px;
+                    }
+
+                    h2 {
+                        line-height: 24px;
+                        margin-left: 16%;
+                    }
+
+                    img {
+                        width: 100%;
+                        padding: 10px;
+                    }
+                }
+            }
+
+
+        }
+
+        .add__swiper__coin {
+            background: transparent !important;
+            border: 2px dashed var(--grey80);
+            position: relative;
+
+            .add__coin__container {
+                position: absolute;
+                top: 25%;
+                left: 30%;
+                display: block;
+                justify-content: center;
+
+                img {
+                    margin-left: 10px;
+                }
+
+                p {
+                    color: var(--grey40);
+                    font-family: 'Sofia Pro';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 160%;
+
+                }
+            }
+
+
+        }
+
+        .mySwiper-prev {
+            top: 45%;
+        }
+    }
+}
+
+.buying__coins {
+    margin-bottom: 30px;
+    .selected__coin {
+
+        height: 100%;
+        margin-bottom: 20px;
+        .selected__coin__container {
+            padding: 24px;
+            background: var(--grey100);
+            border-radius: 12px;
+            .coin__img {
+                display: flex;
+                vertical-align: center;
+                margin-bottom: 16px;
+
+                img {
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 16px;
+                }
+
+                h1 {
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+
+            }
+
+            .coin__price {
+                margin-bottom: 32px;
+
+                h2 {
+                    font-size: 18px;
+                }
+            }
+
+            .exchange__balance {
+                margin-bottom: 24px;
+
+                .exchange__balance__container {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    background: var(--baseDarkTransparent);
+                    border-radius: 12px;
+                    padding: 8px;
+
+                    .current__asset {
+                        display: block;
+                        align-items: center;
+
+                        padding: 0;
+
+                    }
+
+                    .current__rate {
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+
+            }
+
+            .shopping {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                gap: 10px;
+
+                .withdrow {
+                    background: var(--royalBlue);
+                    border-radius: 100px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 12px 27px;
+                    gap: 10px;
+
+                    a {
+                        color: #FFF;
+                        font-family: 'Sofia Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 22px;
+                        text-decoration: none;
+
+                    }
+                }
+
+                .deposit {
+                    border: 1px solid #FFF;
+                    border-radius: 100px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 12px 27px;
+                    gap: 10px;
+
+                    a {
+                        color: #FFF;
+                        font-family: 'Sofia Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 22px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    .coinTable {
+        background: var(--grey100);
+        border-radius: 12px;
+        overflow-x:auto;
+        overflow-y: auto;
+        max-height: 565px;
+        
+        .table {    
+               
+            thead {
+                tr {
+                    border-bottom: 1px solid var(--grey80);
+                    text-align: center;
+                    th {
+                        color: var(--grey60);
+                        font-family: 'Graphik';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    td{
+                        text-align: center;
+                        color: var(--grey0);
+                        font-family: 'Graphik';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+
+                    .assets {
+                        img {
+                            padding-right: 20px;
+                        }
+                    }
+
+                    .title {
+                        color: var(--grey40);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:1200px){
+    .swiper__container{
+        .mySwiper{
+            .swiper-slide{
+                width: 224px;
+                height: 173px;
+                .swiper__coin{
+                    .coin__ratio{
+                        margin-top: 10px;
+                    }
+                    .coin__price{
+                        h3{
+                            margin-bottom: 0;
+                        }
+                        h2{
+                            margin-bottom: 0;
+                        }
+                        img{
+                            padding: 0;
+                            width: 100%;
+                            height: 56px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .buying__coins{
+        .selected__coin{
+            .selected__coin__container{
+                .exchange__balance{
+                    .exchange__balance__container{
+                        .current__rate{
+                            img{
+                                width: 55px;
+                                height: 55px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:767px) and (max-width:1024px){
+    h1{
+        font-size: 14px;
+        margin: 0;
+    }
+    h2{
+        font-size: 12px;
+        margin: 0;
+    }
+    h3{
+        font-size: 14px;
+        margin: 0;
+    }
+    .buying__coins{
+        .selected__coin{
+            .selected__coin__container{
+                
+                .exchange__balance{
+                    .exchange__balance__container{
+                        .current__rate{
+                            padding: 0;
+                        }
+                    }
+                }
+                .shopping{
+                    .withdrow{
+                        padding:7px 7px;
+                    } 
+                    .deposit{
+                        padding: 7px 7px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media screen and (max-width:767px){
+    h1{
+        font-size: 18px;
+    }
+    h2{
+        font-size: 16px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    .selected__coin{
+        .selected__coin__container{
+            text-align: center;
+            .coin__img{
+                justify-content: center;
+            }
+        }
+    }
+
+
+    .buying__coins{
+        .coinTable{
+            .table{
+                thead{
+                    tr{
+                        th{
+                            font-size: 14px;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}  

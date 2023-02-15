@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MARKET</title>
+
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <!-- FONTAWESOME CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Styling CSS -->
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/header/marketHeader.css" />
+    <link rel="stylesheet" href="./styles/market/market.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row navHead">
+                <div class="leftMenu col-6 col-lg-6 col-md-2 col-sm-2 col-sm-2">
+                  <div class="row">
+                    <div class="col-3 logo">
+                      <span class="logoPicture"
+                        ><img src="./img/logo.svg" alt=""
+                      /></span>
+                      <a href="/"><span class="text">Cryptolly.</span></a>
+                    </div>
+                    <div class="col-9 nav-links">
+                      <input type="checkbox" id="check">
+                      <label for="check">
+                        <i class="fas fa-bars" id="btn"></i>
+                        <i class="fas fa-times" id="cancel"></i>
+                      </label>
+
+                      <ul>
+                        <li><a href="/dashboard.html">Dashboard</a></li>
+                        <li><a href="/exchange.html">Exchange</a></li>
+                        <li><a href="/wallet.html">Wallet</a></li>
+                        <li><a href="/market.html">Market</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="rightMenu col-6 col-lg-6 col-md-10 col-sm-10 col-sm-10">
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-12 person">
+                          <div class="search-box">
+                            <input
+                              class="search-txt"
+                              type="text"
+                              name=""
+                              placeholder="Search..."
+                            />
+                            <div class="search-btn">
+                              <a href=""> <i class="fas fa-search"></i></a>
+                            </div>
+
+
+
+                          </div>
+                          <div class="notification">
+                            <img src="./img/Notification.svg" alt="" />
+                          </div>
+                          <h1>John Doe</h1>
+                          <img class="profil-img" src="./img/maskGroup.svg" alt="" />
+                          <a href=""><img src="./img/down.svg" alt="" /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Current Stock Market -->
+    <section>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-3 col-lg-12 aside">
+            <!-- Header Part -->
+            <div class="heading">
+              <p>In the past 24 hours</p>
+              <h2>Market is up <span>6.73%</span></h2>
+            </div>
+            <!-- Exchange part -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6">
+                <div class="exchange">
+                  <div class="title">
+                    <p>Top gainer (24h)</p>
+                  </div>
+                  <div class="row content">
+                    <div class="col-2 logo">
+                      <img src="./img/BNB.svg" alt="" />
+                    </div>
+                    <div class="col-6 title">
+                      <h2>USD 567.34</h2>
+                      <h3>Binance Coin</h3>
+                      <p>BNB</p>
+                    </div>
+                    <div class="col-4 graphic">
+                      <div class="title">
+                        <p>110.34%</p>
+                      </div>
+                      <div class="chart">
+                        <img src="./img/Graphic-Geçici-Silinecek.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6">
+                <div class="exchange">
+                  <div class="title">
+                    <p>New listing</p>
+                  </div>
+                  <div class="row content">
+                    <div class="col-2 logo">
+                      <img src="./img/ITC.svg" alt="" />
+                    </div>
+                    <div class="col-6 title">
+                      <h2>USD 34.02</h2>
+                      <h3>IoT Chain</h3>
+                      <p>ITC</p>
+                    </div>
+                    <div class="col-4 graphic">
+                      <div class="title">
+                        <p>Added Apr, 13</p>
+                      </div>
+                      <div class="chart">
+                        <img src="./img/Graphic-Geçici-Silinecek.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6">
+                <div class="exchange">
+                  <div class="title">
+                    <p>Highest volume (24h)</p>
+                  </div>
+                  <div class="row content">
+                    <div class="col-2 logo">
+                      <img src="./img/Bitcoin.svg" alt="" />
+                    </div>
+                    <div class="col-6 title">
+                      <h2>USD 236,213</h2>
+                      <h3>Bitcoin</h3>
+                      <p>BTC</p>
+                    </div>
+                    <div class="col-4 graphic">
+                      <div class="title">
+                        <p>0.53%</p>
+                      </div>
+                      <div class="chart">
+                        <img src="./img/Graphic-Geçici-Silinecek.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-12 col-lg-6 col-md-6 col-sm-6">
+                <div class="exchange">
+                  <div class="title">
+                    <p>Most Visited</p>
+                  </div>
+                  <div class="row content">
+                    <div class="col-2 logo">
+                      <img src="./img/OGN.svg" alt="" />
+                    </div>
+                    <div class="col-6 title">
+                      <h2>USD 123.34</h2>
+                      <h3>Orogin Protocol</h3>
+                      <p>OGN</p>
+                    </div>
+                    <div class="col-4 graphic">
+                      <div class="title">
+                        <p>2.23%</p>
+                      </div>
+                      <div class="chart">
+                        <img src="./img/Graphic-Geçici-Silinecek.svg" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-9 col-lg-12">
+            <div class="tableLink">
+              <div class="tableMenu">
+                <div class="title">
+                  <h2>Market Table</h2>
+                </div>
+                 
+                <div class="tableLinks">
+                  <ul>
+                    <li class="allAssets"><a href="">All Assets <img src="./img/down.svg" alt=""></a></li>
+                    <li class="gainers"><a href="">Gainers</a></li>
+                    <li class="losers"><a href="">Losers</a></li>
+                    <li class="tradeble"><a href="">Tradeble</a></li>
+                  </ul>
+                </div>
+                
+                
+                 <select class="responsiveTableLinks" name="" id="">
+                  <option class="allAs" value="allAssets">All Assets</option>
+                  <option class="gain" value="gainers">Gainers</option>
+                  <option class="loser" value="losers">Losers</option>
+                  <option class="trad" value="tradeble">Tradeble</option>
+                </select>  
+
+              </div>
+            </div>
+            <div class="coinTable">
+              <table class="table table-borderless">
+                <thead>
+                  <tr>
+                    <th>Assets</th>
+                    <th></th>
+                    <th>Last price</th>
+                    <th>Market cap</th>
+                    <th>Change</th>
+                    <th>Chart</th>
+                    <th>Trade</th>
+                  </tr>
+                </thead>
+                <tbody class="marketTableBody" id="marketTableBody">
+                  <tr>
+                    <td class="assets">
+                      <img src="./img/Bitcoin.svg" alt="" /> BTC
+                    </td>
+                    <td class="title">Bitcoin</td>
+                    <td class="lastPrice">USD 53,260.20</td>
+                    <td class="marketCap">USD 53,260.20</td>
+                    <td class="change" style="color: var(--redPrimary)">
+                      0.25%
+                    </td>
+                    <td class="chart">
+                      <img src="./img/Graphic-Geçici Silinecek.svg" alt="" />
+                    </td>
+                    <td class="trade"><button>Buy</button></td>
+                  </tr>
+                  <!-- <tr>
+                    <td class="assets">
+                      <img src="./img/ETH.svg" alt="" /> ETH
+                    </td>
+                    <td class="title">Ethereum</td>
+                    <td class="lastPrice">USD 53,260.20</td>
+                    <td class="marketCap">USD 53,260.20</td>
+                    <td class="change">0.25%</td>
+                    <td class="chart">
+                      <img src="./img/Graphic-Geçici Silinecek.svg" alt="" />
+                    </td>
+                    <td class="trade"><button>Buy</button></td>
+                  </tr>
+                  <tr>
+                    <td class="assets">
+                      <img src="./img/BNB.svg" alt="" /> BNB
+                    </td>
+                    <td class="title">Binance Coin</td>
+                    <td class="lastPrice">USD 53,260.20</td>
+                    <td class="marketCap">USD 53,260.20</td>
+                    <td class="change">0.25%</td>
+                    <td class="chart">
+                      <img src="./img/Graphic-Geçici Silinecek.svg" alt="" />
+                    </td>
+                    <td class="trade"><button>Buy</button></td>
+                  </tr>
+                  <tr>
+                    <td class="assets">
+                      <img src="./img/XRP.svg" alt="" /> XRP
+                    </td>
+                    <td class="title">XRP</td>
+                    <td class="lastPrice">USD 53,260.20</td>
+                    <td class="marketCap">USD 53,260.20</td>
+                    <td class="change">0.25%</td>
+                    <td class="chart">
+                      <img src="./img/Graphic-Geçici Silinecek.svg" alt="" />
+                    </td>
+                    <td class="trade"><button>Buy</button></td>
+                  </tr>
+                  <tr>
+                    <td class="assets">
+                      <img src="./img/USDT.svg" alt="" /> USDT
+                    </td>
+                    <td class="title">Tether</td>
+                    <td class="lastPrice">USD 53,260.20</td>
+                    <td class="marketCap">USD 53,260.20</td>
+                    <td class="change">0.25%</td>
+                    <td class="chart">
+                      <img src="./img/Graphic-Geçici Silinecek.svg" alt="" />
+                    </td>
+                    <td class="trade"><button>Buy</button></td>
+                  </tr>
+                  <tr>
+                    <td class="assets">
+                      <img src="./img/ACT.svg" alt="" /> ACT
+                    </td>
+                    <td class="title">Achain</td>
+                    <td class="lastPrice">USD 53,260.20</td>
+                    <td class="marketCap">USD 53,260.20</td>
+                    <td class="change">0.25%</td>
+                    <td class="chart">
+                      <img src="./img/Graphic-Geçici Silinecek.svg" alt="" />
+                    </td>
+                    <td class="trade"><button>Buy</button></td>
+                  </tr>
+                  <tr>
+                    <td class="assets">
+                      <img src="./img/OGN.svg" alt="" /> OGN
+                    </td>
+                    <td class="title">Origin Protocol</td>
+                    <td class="lastPrice">USD 53,260.20</td>
+                    <td class="marketCap">USD 53,260.20</td>
+                    <td class="change">0.25%</td>
+                    <td class="chart">
+                      <img src="./img/Graphic-Geçici Silinecek.svg" alt="" />
+                    </td>
+                    <td class="trade"><button>Buy</button></td>
+                  </tr>
+                  <tr>
+                    <td class="assets">
+                      <img src="./img/ITC.svg" alt="" /> ITC
+                    </td>
+                    <td class="title">IoT Chain</td>
+                    <td class="lastPrice">USD 53,260.20</td>
+                    <td class="marketCap">USD 53,260.20</td>
+                    <td class="change">0.25%</td>
+                    <td class="chart">
+                      <img src="./img/Graphic-Geçici Silinecek.svg" alt="" />
+                    </td>
+                    <td class="trade"><button>Buy</button></td>
+                  </tr> -->
+                
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stock Market Chart -->
+    <section></section>
+
+    <script src="./javascript/market.js"></script>
+  </body>
+</html>

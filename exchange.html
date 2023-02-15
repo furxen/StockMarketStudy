@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EXCHANGE</title>
+
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/header/marketHeader.css" />
+    <link rel="stylesheet" href="./styles/exchange/exchange.css" />
+
+    <script src="./javascript/binanceApi.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12">
+              <div class="row navHead">
+                <div
+                  class="leftMenu col-6 col-lg-6 col-md-2 col-sm-2 col-sm-2"
+                >
+                  <div class="row">
+                    <div class="col-3 logo">
+                      <span class="logoPicture"
+                        ><img src="./img/logo.svg" alt=""
+                      /></span>
+                      <a href="/"><span class="text">Cryptolly.</span></a>
+                    </div>
+                    <div class="col-9 nav-links">
+                      <input type="checkbox" id="check" />
+                      <label for="check">
+                        <i class="fas fa-bars" id="btn"></i>
+                        <i class="fas fa-times" id="cancel"></i>
+                      </label>
+
+                      <ul>
+                        <li><a href="/dashboard.html">Dashboard</a></li>
+                        <li><a href="/exchange.html">Exchange</a></li>
+                        <li><a href="/wallet.html">Wallet</a></li>
+                        <li><a href="/market.html">Market</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="rightMenu col-6 col-lg-6 col-md-10 col-sm-10 col-sm-10"
+                >
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="row">
+                        <div class="col-12 person">
+                          <div class="search-box">
+                            <input
+                              class="search-txt"
+                              type="text"
+                              name=""
+                              placeholder="Search..."
+                            />
+                            <div class="search-btn">
+                              <a href=""> <i class="fas fa-search"></i></a>
+                            </div>
+                          </div>
+                          <div class="notification">
+                            <img src="./img/Notification.svg" alt="" />
+                          </div>
+                          <h1>John Doe</h1>
+                          <img
+                            class="profil-img"
+                            src="./img/maskGroup.svg"
+                            alt=""
+                          />
+                          <a href=""><img src="./img/down.svg" alt="" /></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="priceBand">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 p-0">
+            <div class="tradingview-widget-container"></div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js"
+              async
+            >
+                {
+                "symbols": [
+                  {
+                    "proName": "BITSTAMP:BTCUSD",
+                    "title": "Bitcoin"
+                  },
+                  {
+                    "proName": "BITSTAMP:ETHUSD",
+                    "title": "Ethereum"
+                  },
+                  {
+                    "description": "BTCTRY",
+                    "proName": "BINANCE:BTCTRY"
+                  },
+                  {
+                    "description": "ETHTRY",
+                    "proName": "BINANCE:ETHTRY"
+                  }
+                ],
+                "showSymbolLogo": true,
+                "colorTheme": "dark",
+                "isTransparent": false,
+                "largeChartUrl": "",
+                "displayMode": "adaptive",
+                "locale": "tr"
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sparkLineSection">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 col-sm-12 p-0">
+            <div class="tradingview-widget-container"></div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+              async
+            >
+              {
+              "symbol": "USDTRY",
+              "width": "100%",
+              "height": "220",
+              "locale": "tr",
+              "dateRange": "1D",
+              "colorTheme": "dark",
+              "trendLineColor": "rgba(41, 98, 255, 1)",
+              "underLineColor": "rgba(41, 98, 255, 0.3)",
+              "underLineBottomColor": "rgba(41, 98, 255, 0)",
+              "isTransparent": false,
+              "autosize": false,
+              "largeChartUrl": ""
+              }
+            </script>
+          </div>
+          <div class="col-md-4 col-sm-12 p-0">
+            <div class="tradingview-widget-container"></div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+              async
+            >
+              {
+                "symbol": "FOREXCOM:EURTRY",
+                "width": "100%",
+                "height": "220",
+                "locale": "tr",
+                "dateRange": "1D",
+                "colorTheme": "dark",
+                "trendLineColor": "rgba(41, 98, 255, 1)",
+                "underLineColor": "rgba(41, 98, 255, 0.3)",
+                "underLineBottomColor": "rgba(41, 98, 255, 0)",
+                "isTransparent": false,
+                "autosize": false,
+                "largeChartUrl": ""
+                }
+            </script>
+          </div>
+          <div class="col-md-4 col-sm-12 p-0">
+            <div class="tradingview-widget-container"></div>
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js"
+              async
+            >
+              {
+              "symbol": "CAPITALCOM:BTCTRY",
+              "width": "100%",
+              "height": "220",
+              "locale": "tr",
+              "dateRange": "1D",
+              "colorTheme": "dark",
+              "trendLineColor": "rgba(41, 98, 255, 1)",
+              "underLineColor": "rgba(41, 98, 255, 0.3)",
+              "underLineBottomColor": "rgba(41, 98, 255, 0)",
+              "isTransparent": false,
+              "autosize": false,
+              "largeChartUrl": ""
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chartSection">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-8 col-sm-12 p-0">
+            <select onChange="LoadCharts();" id="pairs" class="d-none">
+              <option value="BTCUSDT">BTCUSDT</option>
+              <option value="ETHUSDT">ETHUSDT</option>
+            </select>
+
+            <script
+              type="text/javascript"
+              src="https://s3.tradingview.com/tv.js"
+            ></script>
+
+            <div class="tradingview-widget-container" id="tvchart"></div>
+
+            <script>
+              var sym = exchangeInfo.symbols,
+                markup = "";
+              sym.forEach((d) => {
+                markup +=
+                  '<option value="' + d.symbol + '">' + d.symbol + "</option>";
+              });
+
+              document.getElementById("pairs").innerHTML = markup;
+
+              LoadCharts();
+              function LoadCharts() {
+                let symbol = document.getElementById("pairs").value;
+
+                new TradingView.widget({
+                  width: "100%",
+                  height: 610,
+                  symbol: "BINANCE:BTCUSDT",
+                  interval: "D",
+                  timezone: "Etc/UTC",
+                  theme: "dark",
+                  style: "1",
+                  locale: "tr",
+                  toolbar_bg: "#f1f3f6",
+                  hide_side_toolbar: false,
+                  allow_symbol_change: true,
+                  container_id: "tvchart",
+                });
+              }
+            </script>
+
+            <div class="customExchange">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-md-6 col-sm-12 p-0">
+                    <div class="coinBuy">
+                      <div>
+                        <p class="header">
+                          <span class="head">BUY BTC</span>
+                          <span class="balance"> Balance: 0.00 TRY </span>
+                        </p>
+                        <p class="openOrders">Open Orders: 0.00 TRY</p>
+                      </div>
+                      <div class="content">
+                        <div class="typesLine">
+                          <a href="javascript:void(0)" class="button"
+                            >Stop-limit</a
+                          >
+                          <a href="javascript:void(0)" class="button active"
+                            >Limit</a
+                          >
+                          <a href="javascript:void(0)" class="button">Market</a>
+                        </div>
+                      </div>
+                      <div class="limitPrice">
+                        <label for="ask__price" class="ask__label">
+                          <input
+                            type="text"
+                            id="ask__price"
+                            class="inputRate"
+                            maxlength="14"
+                            value=""
+                            placeholder="Price"
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                          />
+                          <span class="symbol">USDT</span>
+                        </label>
+
+                        <label for="ask__amount" class="ask__label">
+                          <input
+                            type="text"
+                            id="ask__amount"
+                            class="inputRate"
+                            maxlength="14"
+                            value=""
+                            placeholder="Amount"
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                          />
+                          <span class="symbol">BTC</span>
+                        </label>
+
+                        <div class="percentile">
+                          <div class="typesLine">
+                            <a href="javascript:void(0)" class="button">25%</a>
+                            <a href="javascript:void(0)" class="button active"
+                              >50%</a
+                            >
+                            <a href="javascript:void(0)" class="button">75%</a>
+                            <a href="javascript:void(0)" class="button">100%</a>
+                          </div>
+                        </div>
+
+                        <label for="ask__total" class="ask__label">
+                          <input
+                            type="text"
+                            id="ask__total"
+                            class="inputRate"
+                            maxlength="14"
+                            value=""
+                            placeholder="Total"
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                          />
+                          <span class="symbol">BTC</span>
+                        </label>
+
+                        <a href="javascript:void(0)" class="buyBTC">Buy BTC</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-sm-12 p-0">
+                    <div class="coinSell">
+                      <div>
+                        <p class="header">
+                          <span class="head">SELL BTC</span>
+                          <span class="balance"> Balance: 0.00 TRY </span>
+                        </p>
+                        <p class="openOrders">Open Orders: 0.00 TRY</p>
+                      </div>
+                      <div class="content">
+                        <div class="typesLine">
+                          <a href="javascript:void(0)" class="button"
+                            >Stop-limit</a
+                          >
+                          <a href="javascript:void(0)" class="button active"
+                            >Limit</a
+                          >
+                          <a href="javascript:void(0)" class="button">Market</a>
+                        </div>
+                      </div>
+                      <div class="limitPrice">
+                        <label for="ask__price" class="ask__label">
+                          <input
+                            type="text"
+                            id="ask__price"
+                            class="inputRate"
+                            maxlength="14"
+                            value=""
+                            placeholder="Price"
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                          />
+                          <span class="symbol">USDT</span>
+                        </label>
+
+                        <label for="ask__amount" class="ask__label">
+                          <input
+                            type="text"
+                            id="ask__amount"
+                            class="inputRate"
+                            maxlength="14"
+                            value=""
+                            placeholder="Amount"
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                          />
+                          <span class="symbol">BTC</span>
+                        </label>
+
+                        <div class="percentile">
+                          <div class="typesLine">
+                            <a href="javascript:void(0)" class="button">25%</a>
+                            <a href="javascript:void(0)" class="button active"
+                              >50%</a
+                            >
+                            <a href="javascript:void(0)" class="button">75%</a>
+                            <a href="javascript:void(0)" class="button">100%</a>
+                          </div>
+                        </div>
+
+                        <label for="ask__total" class="ask__label">
+                          <input
+                            type="text"
+                            id="ask__total"
+                            class="inputRate"
+                            maxlength="14"
+                            value=""
+                            placeholder="Total"
+                            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+                          />
+                          <span class="symbol">BTC</span>
+                        </label>
+
+                        <a href="javascript:void(0)" class="sellBTC"
+                          >Sell BTC</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="row">
+              <div class="col-12 left-buy-sell">
+                <div class="buy-sell-hood">
+                  <div class="quantity">
+                    <span class="title">Price</span>
+                    <span class="text">(BTC)</span>
+                  </div>
+                  <div class="price">
+                    <span class="title">Amount</span>
+                    <span class="text">(TRY)</span>
+                  </div>
+                  <div class="quantity">
+                    <span class="title">Total</span>
+                    <span class="text">(BTC)</span>
+                  </div>
+                </div>
+                <div class="buySellPath">
+                  <div class="graphic-view">
+                    <ul class="buy-sell-ul sell-ul">
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="drop">1453.908</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="buy-sell-hood">
+                    <div class="lastPrice">
+                      <span class="title">Last Price: 
+                      <span class="bigDollar" id="bigDollar">$</span>
+                      </span>
+                      <span class="value" id="stock-price">Loading..</span>
+                      <span class="bigTRY" id="bigTRY">₺ </span>
+                      <span id="stock-price-try" class="stock-price-try" style="color: red;">Loading..</span>
+                    </div>
+                    <div class="percentile">
+                      <span class="bigPerc" id="bigPercentile">%</span>
+                      <span id="stock-price-perc" style="color: red;">Loading..</span>
+                    </div>
+                  </div>
+                  <div class="graphic-view">
+                    <ul class="buy-sell-ul buy-ul">
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                      <li class="buy-sell-list">
+                        <span class="value">0.004934</span>
+                        <span class="quantity">7732.213</span>
+                        <span class="price">1453.908</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="exchangeFilter">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 col-sm-12 p-0">
+            <div class="content">
+              <div class="search">
+                <input
+                  type="text"
+                  class="search-button"
+                  placeholder="Varlık ara..."
+                />
+                <img src="./img/search.svg" alt="" />
+              </div>
+              <div class="coin-list">
+                <div class="coin-item ripple">
+                  <div class="ripple-detail">
+                    <img src="./img/ripple.svg" alt="" />
+                    <div class="ripple-title">
+                      <span class="ripple-text">Ripple</span>
+                      <span class="xrp">XRP</span>
+                    </div>
+                  </div>
+                  <div class="data">
+                    <span class="price">8.29 TRY</span>
+                    <span class="drop">-0,85%</span>
+                  </div>
+                </div>
+                <div class="coin-item bittorrent">
+                  <div class="bittorrent-detail">
+                    <img src="./img/bittorrent.svg" alt="" />
+                    <div class="bittorrent-title">
+                      <span class="bittorrent-text">Bittorrent</span>
+                      <span class="btt">BTT</span>
+                    </div>
+                  </div>
+                  <div class="data">
+                    <span class="price">0.07699 TRY</span>
+                    <span class="drop">-0,85%</span>
+                  </div>
+                </div>
+                <div class="coin-item bitcoin-cash">
+                  <div class="bitcoin-cash-detail">
+                    <img src="./img/bitcoin-cash.svg" alt="" />
+                    <div class="bitcoin-cash-title">
+                      <span class="bitcoin-cash-text">Bitcoin Cash</span>
+                      <span class="bch">BCH</span>
+                    </div>
+                  </div>
+                  <div class="data">
+                    <span class="price">8.29 TRY</span>
+                    <span class="drop">-0,85%</span>
+                  </div>
+                </div>
+                <div class="coin-item ethereum">
+                  <div class="ethereum-detail">
+                    <img src="./img/ethereum.svg" alt="" />
+                    <div class="ethereum-title">
+                      <span class="ethereum-text">Ethereum</span>
+                      <span class="eth">ETH</span>
+                    </div>
+                  </div>
+                  <div class="data">
+                    <span class="price">17,257.72</span>
+                    <span class="drop">-3,47%</span>
+                  </div>
+                </div>
+                <div class="coin-item digibyte">
+                  <div class="digibyte-detail">
+                    <img src="./img/digibyte.svg" alt="" />
+                    <div class="digibyte-title">
+                      <span class="digibyte-text">DigiByte</span>
+                      <span class="dgb">DGB</span>
+                    </div>
+                  </div>
+                  <div class="data">
+                    <span class="price">0,73 TRY</span>
+                    <span class="rise">0,07%</span>
+                  </div>
+                </div>
+                <div class="coin-item holo">
+                  <div class="holo-detail">
+                    <img src="./img/holo.svg" alt="" />
+                    <div class="holo-title">
+                      <span class="holo-text">Holo</span>
+                      <span class="hot">HOT</span>
+                    </div>
+                  </div>
+                  <div class="data">
+                    <span class="price">0.203995 TRY</span>
+                    <span class="rise">4,25%</span>
+                  </div>
+                </div>
+                <div class="coin-item litecoin">
+                  <div class="litecoin-detail">
+                    <img src="./img/litecoin.svg" alt="" />
+                    <div class="litecoin-title">
+                      <span class="litecoin-text">Litecoin</span>
+                      <span class="ltc">LTC</span>
+                    </div>
+                  </div>
+                  <div class="data">
+                    <span class="price">1,854.38 TRY</span>
+                    <span class="rise">3,04%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 p-0">
+            <div class="statistics-data">
+              <h1 class="hood">BTC Fiyat İstatistikleri</h1>
+              <span class="tether-title">BTC Değeri</span>
+              <span class="tether-data" id="stock-price-2">Loading...</span>
+              <span class="market-value">Piyasa Değeri</span>
+              <span class="market-data">₺11,495,108,313,722</span>
+              <div class="min-max">
+                <span class="minimal-maximum">En Düşük / En Yüksek</span>
+                <span class="days">7g</span>
+              </div>
+              <span class="min-max-value">
+                <span id="high-value">
+                  ₺0.3928
+                </span> / 
+                <span id="low-value">
+                  ₺0.4541
+                </span>
+                
+              
+              </span>
+              <span class="all-time-hight">Tüm Zamanlar En Yüksek</span>
+              <div class="value-percentile">
+                <span class="value">₺1.04</span>
+                <span class="drop">-62.00%</span>
+              </div>
+              <span class="all-time-low">Tüm Zamanlar En Düşük</span>
+              <div class="value-percentile">
+                <span class="value">₺0.01108</span>
+                <span class="rise">+3455.46%</span>
+              </div>
+              <span class="total-supply">Toplam Arz</span>
+              <span class="supply-value">18,985,893</span>
+              <span class="max-supply">Max Arz</span>
+              <span class="supply-data">21,000,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- JQUERY CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./javascript/exchange.js"></script>
+  </body>
+</html>

@@ -1,0 +1,353 @@
+body {
+    background: var(--darkerGrey);
+}
+
+h2 {
+    color: var(--grey0);
+    font-family: 'Sofia Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+}
+
+p {
+    color: var(--grey40);
+    font-family: 'Graphik';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+}
+
+h4 {
+    color: var(--grey0);
+    font-family: 'Sofia Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 120%;
+}
+
+span {
+    color: var(--grey40);
+    font-family: 'Graphik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+h3 {
+    color: var(--grey0);
+    font-family: 'Graphik';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 0;
+}
+
+ul{
+    list-style: none;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--grey80);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background: none;
+}
+
+
+.coinTransactions {
+    .balanceContainer {
+        margin: 0;
+        background: var(--grey100);
+        border-radius: 20px;
+        padding: 10px;
+        border-right: 1px solid var(--grey100);
+        .balanceContent{
+            border-right: 1px solid var(--grey80);
+            .balance {
+                h4 {
+                    margin-bottom: 54px;
+                }
+                .balanceTitle{
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        
+
+        .wallet {
+            .currenciesImg {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-image: url(../../img/dashboardCurrencies.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                
+
+                h3 {
+                    color: var(--lightGreen);
+                }
+            }
+
+            .currencies {
+                height: 160px;
+                overflow-y: scroll;
+
+                .currency {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 5px;
+
+                    .coin {
+                        display: flex;
+                        align-items: flex-start;
+
+                        img {
+                            padding-top: 4px;
+                            padding-right: 6px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .transaction {
+        margin: 0;
+        margin-bottom: 20px;
+        background: var(--grey100);
+        border-radius: 20px;
+        padding: 20px;
+        padding-bottom: 0;
+
+        .transactionTitle {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                color: var(--grey0);
+                padding: 3px 10px;
+                border-radius: 20px;
+                border: 1px solid var(--grey0);
+                cursor: pointer;
+            }
+        }
+
+        .transactionContent {
+            padding-bottom: 7px;
+            ul {
+                overflow-y: scroll;
+                height: 137px;
+
+                .purchases {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 14px;
+
+                }
+
+                .purchases:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+        }
+    }
+}
+
+.overallGrowth {
+    .exchange {
+        background: var(--grey100);
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom: 20px;
+        .get {
+            background: var(--grey80);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            padding: 10px 12px;
+            gap: 16px;
+            border-radius: 100px;
+            input {
+                background: transparent;
+                border: none;
+                color: var(--grey0);
+                border-right: 1px solid var(--grey40);
+                width: 70%;
+            }
+            img{
+                max-width: 25%;
+            }
+        }
+        .exchangeButton{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+            button{
+                background: var(--royalBlue);
+                color: var(--grey0);
+                border-radius: 100px;
+                border: none;
+                padding: 10px 52px;
+                gap: 10px;
+            }
+        }
+        
+    }
+    .graphic{
+        background: var(--grey100);
+        border-radius: 20px;
+        padding: 20px;
+        .graphicTitle{
+            display: flex;
+            justify-content: space-between;
+            ul{
+                display: flex;
+                li{
+                    padding-right: 30px;
+                    a{
+                        text-decoration: none;
+                        color: var(--grey60);
+                        font-family: 'Sofia Pro';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 160%;
+                    }
+                    .active{
+                        color: var(--grey0);
+                        background: var(--darkerGrey);
+                        border-radius: 50px;
+                        padding: 8px 16px;
+                    }
+                    
+                }
+                
+            }
+        }
+        .graphicContent{
+            width: 100%;
+            height: 260px;
+            background-image: url(../../img/exchangeGraphic.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+}
+
+.swiperContainer{
+    .swiper-slide{
+        background: var(--grey100);
+        padding: 10px; 
+        border-radius: 10px;
+        .swiperGraphic{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img{
+                width: 60%;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1060px){
+    .overallGrowth{
+        .graphic{
+            .graphicTitle{
+                ul{
+                    li{
+                        display: none;
+                       padding: 0;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    h2{
+       font-size: 16px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    h4{
+        font-size: 16px;
+    }
+    p{
+        font-size: 12px;
+    }
+    span{
+        font-size: 14px;
+    }
+    .coinTransactions{
+        .balanceContainer{
+            .balanceContent{
+                border: none;
+                border-bottom: 1px solid var(--grey80);
+                margin-bottom: 20px;
+                .balance{
+                    .balanceTitle{
+                        justify-content: space-around;
+                    }
+                    h4{
+                        margin-bottom: 10px;
+                        text-align: center;
+                    }
+                    .incomeExpenses{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .overallGrowth{
+        .graphic{
+            .graphicContent{
+                height: 100px;
+            }
+        }
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

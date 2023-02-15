@@ -1,0 +1,372 @@
+body {
+  background: var(--darkerGrey);
+}
+
+h2 {
+  color: var(--grey0);
+  font-family: 'Sofia Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+p {
+  color: var(--grey40);
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+}
+
+h4 {
+  color: var(--grey0);
+  font-family: 'Sofia Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 120%;
+}
+
+span {
+  color: var(--grey40);
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+h3 {
+  color: var(--grey0);
+  font-family: 'Graphik';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--grey80);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+.coinTransactions .balanceContainer {
+  margin: 0;
+  background: var(--grey100);
+  border-radius: 20px;
+  padding: 10px;
+  border-right: 1px solid var(--grey100);
+}
+
+.coinTransactions .balanceContainer .balanceContent {
+  border-right: 1px solid var(--grey80);
+}
+
+.coinTransactions .balanceContainer .balanceContent .balance h4 {
+  margin-bottom: 54px;
+}
+
+.coinTransactions .balanceContainer .balanceContent .balance .balanceTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.coinTransactions .balanceContainer .wallet .currenciesImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url(../../img/dashboardCurrencies.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.coinTransactions .balanceContainer .wallet .currenciesImg h3 {
+  color: var(--lightGreen);
+}
+
+.coinTransactions .balanceContainer .wallet .currencies {
+  height: 160px;
+  overflow-y: scroll;
+}
+
+.coinTransactions .balanceContainer .wallet .currencies .currency {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.coinTransactions .balanceContainer .wallet .currencies .currency .coin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.coinTransactions .balanceContainer .wallet .currencies .currency .coin img {
+  padding-top: 4px;
+  padding-right: 6px;
+}
+
+.coinTransactions .transaction {
+  margin: 0;
+  margin-bottom: 20px;
+  background: var(--grey100);
+  border-radius: 20px;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+.coinTransactions .transaction .transactionTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.coinTransactions .transaction .transactionTitle p {
+  color: var(--grey0);
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--grey0);
+  cursor: pointer;
+}
+
+.coinTransactions .transaction .transactionContent {
+  padding-bottom: 7px;
+}
+
+.coinTransactions .transaction .transactionContent ul {
+  overflow-y: scroll;
+  height: 137px;
+}
+
+.coinTransactions .transaction .transactionContent ul .purchases {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.coinTransactions .transaction .transactionContent ul .purchases:last-child {
+  margin-bottom: 0;
+}
+
+.overallGrowth .exchange {
+  background: var(--grey100);
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.overallGrowth .exchange .get {
+  background: var(--grey80);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px 12px;
+  gap: 16px;
+  border-radius: 100px;
+}
+
+.overallGrowth .exchange .get input {
+  background: transparent;
+  border: none;
+  color: var(--grey0);
+  border-right: 1px solid var(--grey40);
+  width: 70%;
+}
+
+.overallGrowth .exchange .get img {
+  max-width: 25%;
+}
+
+.overallGrowth .exchange .exchangeButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overallGrowth .exchange .exchangeButton button {
+  background: var(--royalBlue);
+  color: var(--grey0);
+  border-radius: 100px;
+  border: none;
+  padding: 10px 52px;
+  gap: 10px;
+}
+
+.overallGrowth .graphic {
+  background: var(--grey100);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.overallGrowth .graphic .graphicTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.overallGrowth .graphic .graphicTitle ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.overallGrowth .graphic .graphicTitle ul li {
+  padding-right: 30px;
+}
+
+.overallGrowth .graphic .graphicTitle ul li a {
+  text-decoration: none;
+  color: var(--grey60);
+  font-family: 'Sofia Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 160%;
+}
+
+.overallGrowth .graphic .graphicTitle ul li .active {
+  color: var(--grey0);
+  background: var(--darkerGrey);
+  border-radius: 50px;
+  padding: 8px 16px;
+}
+
+.overallGrowth .graphic .graphicContent {
+  width: 100%;
+  height: 260px;
+  background-image: url(../../img/exchangeGraphic.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.swiperContainer .swiper-slide {
+  background: var(--grey100);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.swiperContainer .swiper-slide .swiperGraphic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.swiperContainer .swiper-slide .swiperGraphic img {
+  width: 60%;
+}
+
+@media screen and (max-width: 1060px) {
+  .overallGrowth .graphic .graphicTitle ul li {
+    display: none;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 16px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 12px;
+  }
+  span {
+    font-size: 14px;
+  }
+  .coinTransactions .balanceContainer .balanceContent {
+    border: none;
+    border-bottom: 1px solid var(--grey80);
+    margin-bottom: 20px;
+  }
+  .coinTransactions .balanceContainer .balanceContent .balance .balanceTitle {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .coinTransactions .balanceContainer .balanceContent .balance h4 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .coinTransactions .balanceContainer .balanceContent .balance .incomeExpenses {
+    text-align: center;
+  }
+  .overallGrowth .graphic .graphicContent {
+    height: 100px;
+  }
+}
+/*# sourceMappingURL=dashboard.css.map */
